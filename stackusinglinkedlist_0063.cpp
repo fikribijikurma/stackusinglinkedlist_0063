@@ -66,27 +66,26 @@ public:
 };
 
 int main() {
-	int main() {
-		Stack stack;
+	Stack stack;
 
-		int choice = 0;
-		int value;
+	int choice = 0;
+	int value;
 
-		while (choice != 5) {
-			cout << "1. push\n";
-			cout << "2. pop\n";
-			cout << "3. peek\n";
-			cout << "4. Exit\n";
-			cout << "Enter your choice: ";
-			cin >> choice;
+	while (choice != 5) {
+		cout << "1. push\n";
+		cout << "2. pop\n";
+		cout << "3. peek\n";
+		cout << "4. Exit\n";
+		cout << "Enter your choice: ";
+		cin >> choice;
 
-			switch (choice) {
-			case 1:
+		switch (choice) {
+		case 1:
 				cout << "Enter the value to push: ";
 				cin >> value;
 				stack.push(value); // push the top element value onto the stack
 				break;
-			case 2:
+		case 2:
 				if (!stack.isEmpty()) {
 					stack.pop(); // pop the top element from the stack
 				}
@@ -94,11 +93,21 @@ int main() {
 					cout << "Stack is empty. cannot pop. " << endl;
 				}
 				break;
-			case 3:
-				if (!stack.isEmpty()) {
-
-				}
+		case 3:
+			if (!stack.isEmpty()) {
+					stack.peek(); // Get the value of the top element
 			}
+			else {
+				out << "Stack is empty. No top value. " << endl;
+			}
+			break;
+
+		case 4:
+			cout << "Exiting program. " << endl;
+			break;
+		default:
+			cout << "Invalid choice. Try again. " << endl;
+			break;
 		}
 	}
 }
