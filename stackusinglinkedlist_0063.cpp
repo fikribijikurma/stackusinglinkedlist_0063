@@ -29,5 +29,14 @@ public:
 		newNode->next = top; // 3. set the next pointer of the new nofde to the current top node
 		top = newNode; // 4. Update the top pointer to the new node
 		cout << "push value : " << endl;
+		return value;
+
+	}
+
+	// pop operation: remove the topmost element from the stack
+	void pop() {
+		if (top == NULL) {
+
+		}
 	}
 };
