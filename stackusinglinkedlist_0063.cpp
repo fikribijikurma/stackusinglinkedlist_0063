@@ -83,7 +83,13 @@ int main() {
 			switch (choice) {
 			case 1:
 				cout << "Enter the value to push: ";
-				cin >> value
+				cin >> value;
+				stack.push(value); // push the top element value onto the stack
+				break;
+			case 2:
+				if (!stack.isEmpty()) {
+					stack.pop();
+				}
 			}
 		}
 	}
